@@ -15,9 +15,10 @@ export const useMainStyles = createStyles(
 );
 
 export const useActiveLinkStyles = createStyles(
-  ({ colors, radius, spacing }) => ({
+  ({ colors, radius, spacing, fontSizes }) => ({
     base: {
-      padding: spacing.xs,
+      fontSize: fontSizes.sm,
+      padding: "4px",
       borderRadius: radius.sm,
       color: colors.eggshell[0],
       fontFamily: "Open Sans, sans-serif",
@@ -28,7 +29,8 @@ export const useActiveLinkStyles = createStyles(
       },
     },
     active: {
-      padding: spacing.xs,
+      fontSize: fontSizes.sm,
+      padding: "4px",
       borderRadius: radius.sm,
       color: colors.red[8],
       fontFamily: "Poppins, sans-serif",

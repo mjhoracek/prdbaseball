@@ -33,4 +33,20 @@ export const headerLinks: LinkSet = [
     label: "Championship Gallery",
     href: "/championship-gallery",
   },
+  {
+    label: "PRD LeagueApps Login",
+    href: "/championship-gallery",
+  },
+  {
+    label: "Book Lessons",
+    href: "/championship-gallery",
+  },
+  {
+    label: "Contact Us",
+    href: "/championship-gallery",
+  },
+  {
+    label: "Player Registration",
+    href: "/championship-gallery",
+  },
 ];
