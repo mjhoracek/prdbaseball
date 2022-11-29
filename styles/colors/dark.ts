@@ -6,7 +6,7 @@ export const dark: any = [
   "#373A40",
   "#0D0021",
   "#25262B",
-  "#0E0C0E", //this value is the default dark mode background color, set by mantine
+  "#000000", //this value is the default dark mode background color, set by mantine
   "#141517",
   "#101113",
 ];

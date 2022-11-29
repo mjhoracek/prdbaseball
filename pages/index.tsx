@@ -1,5 +1,5 @@
 import { getMainLayout } from "../components/core/layout/main";
-import { HeroComponent } from "../components/features/Home/Hero";
+import { HeroComponent } from "../components/features/Hero";
 import { Head } from "../components/shared/Head";
 
 const HomePage = () => (

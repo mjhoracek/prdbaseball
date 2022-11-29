@@ -1,6 +1,7 @@
 import { MantineThemeOverride } from "@mantine/core";
 
 import { colors } from "./colors";
+import { gradients } from "./gradients";
 
 export const other = {
   colors: {
@@ -12,12 +13,15 @@ export const other = {
     xxxl: "4.5rem",
     xxxxl: "5.5rem",
   },
+  gradients: {
+    ...gradients,
+  },
 };
 
 export const theme: MantineThemeOverride = {
   primaryColor: "brand",
   colorScheme: "dark",
-  fontFamily: "Barlow, sans-serif",
+  fontFamily: "Poppins, sans serif",
   fontSizes: {
     xs: 12,
     sm: 14,
@@ -26,7 +30,7 @@ export const theme: MantineThemeOverride = {
     xl: 22,
   },
   headings: {
-    fontFamily: "Oswald, sans-serif",
+    fontFamily: "Stalinist One",
     fontWeight: 500,
     sizes: {
       h1: { fontSize: 38 },
