@@ -45,7 +45,6 @@ import {
 
 import { HomePlate } from "./HomePlate";
 import { MiniField } from "./MiniField";
-import { YakkertechSquareLogo } from "./YakkertechSquareLogo";
 import { GhostLogo } from "./GhostLogo";
 
 export const SVG = {
@@ -98,5 +97,4 @@ export const SVG = {
   User: FiUser,
   Users: FiUsers,
   X: FiX,
-  YakkertechSquareLogo,
 };
