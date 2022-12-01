@@ -4,7 +4,7 @@ import { Head } from "../components/shared/Head";
 
 const HomePage = () => (
   <>
-    <Head title="Home" description="PRD Ghosts" imageAlt="Yakkertech Logo" />
+    <Head title="Home" description="PRD Ghosts" imageAlt="PRD Logo" />
     <HeroComponent />
   </>
 );

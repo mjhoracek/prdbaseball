@@ -10,6 +10,7 @@ export default class _Document extends Document {
       ...initialProps,
       styles: (
         <>
+          <link rel="shortcut icon" href="/public/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
