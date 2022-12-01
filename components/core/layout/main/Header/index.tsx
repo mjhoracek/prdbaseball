@@ -28,19 +28,18 @@ export const Header = ({ isDrawerOpen, setIsDrawerOpen }: Props) => {
         },
       }}
     >
-      <Link href={"/"}>
-        <SVG.GhostLogo
-          style={{
-            width: "50px",
-            height: "50px",
-            marginTop: "-8px",
-            cursor: "pointer",
-          }}
-        />
+      <Link href="/">
+        <div>
+          <SVG.GhostLogo
+            style={{
+              width: "50px",
+              height: "50px",
+              marginTop: "-8px",
+              cursor: "pointer",
+            }}
+          />
+        </div>
       </Link>
-      {/* <Group>
-        <SVG.Twitter />
-      </Group> */}
       <Group spacing="lg" position="right" noWrap sx={{ color: "white" }}>
         <Center>
           <Burger
