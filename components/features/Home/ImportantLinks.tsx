@@ -1,7 +1,8 @@
-import { Stack, Title } from "@mantine/core";
+import { Group, Stack, Title } from "@mantine/core";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../../shared/atoms/Button";
+import { SVG } from "../../shared/atoms/SVG";
 
 type Props = {};
 
@@ -28,6 +29,12 @@ const buttons = [
   },
 ];
 
+const socialLinks = {
+  instagram: "https://www.instagram.com/prdbaseballacademy/",
+  facebook: "https://www.facebook.com/PRDBaseballAcademy/",
+  twitter: "https://twitter.com/prdbaseball",
+};
+
 export const ImportantLinks = (props: Props) => {
   return (
     <Stack
@@ -38,6 +45,26 @@ export const ImportantLinks = (props: Props) => {
         },
       })}
     >
+      <Group spacing={24} position="center" sx={{ width: "100%" }}>
+        <a
+          href={socialLinks.instagram}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <SVG.Instagram style={{ cursor: "pointer" }} size={25} />
+        </a>
+        <a
+          href={socialLinks.instagram}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <SVG.Facebook style={{ cursor: "pointer" }} size={25} />
+        </a>
+        <a
+          href={socialLinks.instagram}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <SVG.Twitter style={{ cursor: "pointer" }} size={25} />
+        </a>
+      </Group>
       <Title sx={{ textAlign: "center", fontSize: 14 }}>Important Links</Title>
 
       {buttons.map((button, i) => {
