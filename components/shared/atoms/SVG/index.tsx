@@ -35,6 +35,8 @@ import {
   FiPercent,
   FiPieChart,
   FiCalendar,
+  FiInstagram,
+  FiYoutube,
 } from "react-icons/fi";
 import { SiOkta, SiFacebook, SiTwitter } from "react-icons/si";
 import {
@@ -48,6 +50,8 @@ import { MiniField } from "./MiniField";
 import { GhostLogo } from "./GhostLogo";
 
 export const SVG = {
+  Instagram: FiInstagram,
+  Youtube: FiYoutube,
   GhostLogo: GhostLogo,
   AlertCircle: FiAlertCircle,
   ArrowDown: FiArrowDown,
