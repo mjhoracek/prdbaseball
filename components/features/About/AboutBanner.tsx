@@ -1,18 +1,6 @@
+import { createStyles, Stack, Title } from "@mantine/core";
 import React from "react";
-import {
-  Box,
-  Center,
-  Group,
-  Image,
-  Stack,
-  Title,
-  Text,
-  createStyles,
-} from "@mantine/core";
 import { NAVBAR_HEIGHT } from "../../core/layout/main";
-import { GlowWrapper } from "../../shared/atoms/GlowWrapper";
-import { ImportantLinks } from "./ImportantLinks";
-import { SponsorList } from "./SponsorList";
 
 type Props = {};
 
@@ -62,28 +50,12 @@ const useStyles = createStyles(({ colors, radius, spacing, breakpoints }) => ({
   },
 }));
 
-export const HeroComponent = (props: Props) => {
+export const AboutBanner = (props: Props) => {
   const { classes } = useStyles();
 
   return (
     <Stack className={classes.container}>
-      <Center pt={10}>
-        <Title className={classes.title}>PRD Baseball Academy</Title>
-      </Center>
-      <Group position="center" className={classes.banner}>
-        <ImportantLinks />
-        <Center className={classes.imageContainer}>
-          <GlowWrapper>
-            <Image
-              src="/images/ghost-banner.png"
-              width="100%"
-              alt="PRD Ghost Logo"
-            />
-          </GlowWrapper>
-        </Center>
-      </Group>
-      <Text className={classes.subText}>Thank you to our sponsors!</Text>
-      <SponsorList />
+      <Title className={classes.title}>About Us</Title>
     </Stack>
   );
 };
