@@ -14,6 +14,10 @@ export const headerLinks: LinkSet = [
     href: "/club-teams",
   },
   {
+    label: "PRD Training",
+    href: "/prd-training",
+  },
+  {
     label: "Showcases",
     href: "/showcases",
   },
@@ -35,18 +39,18 @@ export const headerLinks: LinkSet = [
   },
   {
     label: "PRD LeagueApps Login",
-    href: "/championship-gallery",
+    href: "https://accounts.leagueapps.com/login?client_id=1&siteId=33421",
   },
   {
     label: "Book Lessons",
-    href: "/championship-gallery",
+    href: "https://prdbaseballacademy.ezfacility.com/Sessions",
   },
   {
     label: "Contact Us",
-    href: "/championship-gallery",
+    href: "/contact-us",
   },
   {
     label: "Player Registration",
-    href: "/championship-gallery",
+    href: "https://peninsulariverdawgs.leagueapps.com/clubteams/1179892-2020-21-prd-registration",
   },
 ];
