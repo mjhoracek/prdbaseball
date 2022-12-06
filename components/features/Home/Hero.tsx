@@ -1,18 +1,9 @@
 import React from "react";
-import {
-  Box,
-  Center,
-  Group,
-  Image,
-  Stack,
-  Title,
-  Text,
-  createStyles,
-} from "@mantine/core";
+import { Center, Stack, Title, Text, createStyles } from "@mantine/core";
 import { NAVBAR_HEIGHT } from "../../core/layout/main";
-import { GlowWrapper } from "../../shared/atoms/GlowWrapper";
 import { ImportantLinks } from "./ImportantLinks";
 import { SponsorList } from "./SponsorList";
+import { SocialLinks } from "./SocialLinks";
 
 type Props = {};
 
@@ -20,7 +11,7 @@ const useStyles = createStyles(({ colors, radius, spacing, breakpoints }) => ({
   container: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-start",
+    justifyContent: "space-around",
     alignItems: "center",
     width: "100%",
     maxWidth: "100vw",
@@ -37,22 +28,8 @@ const useStyles = createStyles(({ colors, radius, spacing, breakpoints }) => ({
       fontSize: "23px",
     },
   },
-  banner: {
-    width: "100%",
-    padding: "10px",
-
-    [`@media (max-width: ${breakpoints.sm}px)`]: {
-      flexDirection: "column-reverse",
-    },
-  },
-  imageContainer: {
-    width: "40%",
-    [`@media (max-width: ${breakpoints.sm}px)`]: {
-      width: "80%",
-    },
-  },
   subText: {
-    color: "white",
+    color: colors.eggshell[9],
     fontSize: "16px",
     textAlign: "center",
 
@@ -67,21 +44,13 @@ export const HeroComponent = (props: Props) => {
 
   return (
     <Stack className={classes.container}>
-      <Center pt={10}>
+      <Stack>
+        <SocialLinks />
         <Title className={classes.title}>PRD Baseball Academy</Title>
-      </Center>
-      <Group position="center" className={classes.banner}>
+      </Stack>
+      <Center>
         <ImportantLinks />
-        <Center className={classes.imageContainer}>
-          <GlowWrapper>
-            <Image
-              src="/images/ghost-banner.png"
-              width="100%"
-              alt="PRD Ghost Logo"
-            />
-          </GlowWrapper>
-        </Center>
-      </Group>
+      </Center>
       <Text className={classes.subText}>Thank you to our sponsors!</Text>
       <SponsorList />
     </Stack>

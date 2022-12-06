@@ -37,36 +37,7 @@ const socialLinks = {
 
 export const ImportantLinks = (props: Props) => {
   return (
-    <Stack
-      sx={({ breakpoints }) => ({
-        marginRight: "100px",
-        [`@media (max-width: ${breakpoints.sm}px)`]: {
-          marginRight: "0px",
-        },
-      })}
-    >
-      <Group spacing={24} position="center" sx={{ width: "100%" }}>
-        <a
-          href={socialLinks.instagram}
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          <SVG.Instagram style={{ cursor: "pointer" }} size={25} />
-        </a>
-        <a
-          href={socialLinks.instagram}
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          <SVG.Facebook style={{ cursor: "pointer" }} size={25} />
-        </a>
-        <a
-          href={socialLinks.instagram}
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          <SVG.Twitter style={{ cursor: "pointer" }} size={25} />
-        </a>
-      </Group>
-      <Title sx={{ textAlign: "center", fontSize: 14 }}>Important Links</Title>
-
+    <Stack>
       {buttons.map((button, i) => {
         return (
           <Link key={i} href={button.link}>

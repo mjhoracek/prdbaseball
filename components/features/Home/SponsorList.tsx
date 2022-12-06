@@ -4,16 +4,15 @@ import React from "react";
 type Props = {};
 
 const sponsorLinks = [
-  "/images/sponsors/s1.png",
-  "/images/sponsors/s2.png",
-  "/images/sponsors/s3.png",
-  "/images/sponsors/s4.png",
-  "/images/sponsors/s5.png",
-  "/images/sponsors/s6.png",
-  "/images/sponsors/s7.png",
-  "/images/sponsors/s8.png",
-  "/images/sponsors/s9.png",
-  "/images/sponsors/s10.png",
+  "/images/sponsors/1.png",
+  "/images/sponsors/2.png",
+  "/images/sponsors/3.png",
+  "/images/sponsors/4.png",
+  "/images/sponsors/5.png",
+  "/images/sponsors/6.png",
+  "/images/sponsors/7.png",
+  "/images/sponsors/8.png",
+  "/images/sponsors/9.png",
 ];
 
 export const SponsorList = (props: Props) => {

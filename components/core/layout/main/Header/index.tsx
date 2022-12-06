@@ -36,6 +36,7 @@ export const Header = ({ isDrawerOpen, setIsDrawerOpen }: Props) => {
               height: "50px",
               marginTop: "-8px",
               cursor: "pointer",
+              fill: "#6E6B6D",
             }}
           />
         </div>

@@ -21,7 +21,7 @@ export const other = {
 export const theme: MantineThemeOverride = {
   primaryColor: "brand",
   colorScheme: "dark",
-  fontFamily: "Poppins, sans serif",
+  fontFamily: "Barlow, sans serif",
   fontSizes: {
     xs: 12,
     sm: 14,

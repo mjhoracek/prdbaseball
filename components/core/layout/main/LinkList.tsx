@@ -1,8 +1,5 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-import { Button, Menu } from "@mantine/core";
-
 import { headerLinks } from "./linkSets";
 import { useActiveLinkStyles } from "./styles";
 
