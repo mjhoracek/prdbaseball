@@ -6,9 +6,11 @@ import {
   Title,
   Text,
   Image,
+  SimpleGrid,
 } from "@mantine/core";
 import React from "react";
 import { NAVBAR_HEIGHT } from "../../core/layout/main";
+import { coaches } from "./coaches";
 
 type Props = {};
 
@@ -60,6 +62,31 @@ const useStyles = createStyles(({ colors, radius, spacing, breakpoints }) => ({
   },
 }));
 
+type HeadshotProps = {
+  image: string;
+  name: string;
+  position: string;
+};
+
+const Headshot = ({ image, name, position }: HeadshotProps) => {
+  return (
+    <Stack spacing={4} align="center">
+      <Image radius="sm" src={image} alt={name} />
+      <Title
+        sx={({ colors }) => ({
+          fontSize: "22px",
+          fontFamily: "Oswald, sans-serif",
+          textTransform: "uppercase",
+          color: colors.eggshell[0],
+        })}
+      >
+        {name}
+      </Title>
+      <Text>{position}</Text>
+    </Stack>
+  );
+};
+
 export const AboutBanner = (props: Props) => {
   const { classes } = useStyles();
 
@@ -67,72 +94,40 @@ export const AboutBanner = (props: Props) => {
     <>
       <Stack className={classes.container}>
         <Title className={classes.title}>About Us</Title>
-        <Group position="center" align={"apart"} className={classes.banner}>
-          <Center className={classes.imageContainer}>
-            <Image
-              src="/images/prdPhotos/12.jpg"
-              alt="PRD Ghost Logo"
-              radius="md"
-            />
-          </Center>
-          <Stack className={classes.textContainer}>
-            <Text>
-              At PRD, our main objective is to help extend the careers of
-              amateur baseball players 7U thru 18U through high level training,
-              proper team placement, collegiate planning & exposure when the
-              time is right.
-            </Text>
-            <Text mt={20}>
-              We work with our clients to create a variety of training programs
-              for all ages that assist in this mission. Our trainers & advisors
-              are vested, knowledgeable and eager to use modern technology to
-              create positive changes in production for players on the field.
-            </Text>
-            <Text mt={20}>
-              We strive to bring class, character and professionalism to the
-              club baseball world in every facet of operation.
-            </Text>
-          </Stack>
-          <Center className={classes.imageContainer}>
-            <Image
-              src="/images/prdPhotos/27.jpg"
-              alt="PRD Ghost Logo"
-              radius="md"
-            />
-          </Center>
-        </Group>
-        {/* <Group sx={{ width: "100%" }}>
-          <Image
-            width={100}
-            src="/images/prdPhotos/12.jpg"
-            alt="PRD Ghost Logo"
-            radius="md"
-          />
-          <Image
-            width={100}
-            src="/images/prdPhotos/12.jpg"
-            alt="PRD Ghost Logo"
-            radius="md"
-          />
-          <Image
-            width={100}
-            src="/images/prdPhotos/12.jpg"
-            alt="PRD Ghost Logo"
-            radius="md"
-          />
-          <Image
-            width={100}
-            src="/images/prdPhotos/12.jpg"
-            alt="PRD Ghost Logo"
-            radius="md"
-          />
-          <Image
-            width={100}
-            src="/images/prdPhotos/12.jpg"
-            alt="PRD Ghost Logo"
-            radius="md"
-          />
-        </Group> */}
+        <Stack sx={{ width: "80%", paddingBottom: "5%" }}>
+          <Text align="center">
+            At PRD, our main objective is to help extend the careers of amateur
+            baseball players 7U thru 18U through high level training, proper
+            team placement, collegiate planning, and exposure when the time is
+            right. We work with our clients to create a variety of training
+            programs for all ages that assist in this mission. Our trainers and
+            advisors are vested, knowledgeable and eager to use modern
+            technology to create positive changes in production for players on
+            the field.
+          </Text>
+        </Stack>
+        <SimpleGrid
+          px={25}
+          breakpoints={[
+            { minWidth: "xs", cols: 1 },
+            { minWidth: "sm", cols: 2 },
+            { minWidth: "md", cols: 3 },
+            { minWidth: "lg", cols: 4 },
+            { minWidth: "xl", cols: 5 },
+          ]}
+        >
+          {coaches.map((coach, index) => {
+            return (
+              <Center key={index}>
+                <Headshot
+                  name={coach.name}
+                  position={coach.position}
+                  image={"/images/ghost-banner.png"}
+                />
+              </Center>
+            );
+          })}
+        </SimpleGrid>
       </Stack>
     </>
   );
