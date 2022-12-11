@@ -22,7 +22,7 @@ const MainLayout = ({ transparentHeader, children }: Props) => {
   return (
     <Stack
       spacing={0}
-      sx={{ justifyContent: "space-between", minHeight: "100vh" }}
+      sx={{  minHeight: "100vh" }}
     >
       <Header
         transparent={transparentHeader}

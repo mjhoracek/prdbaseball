@@ -5,22 +5,38 @@ import {
     Title,
     Text,
     SimpleGrid,
+    useMantineTheme,
   } from "@mantine/core";
   import React from "react";
-  import { NAVBAR_HEIGHT } from "../../core/layout/main";
-import { channels } from "./channels";
+
+  const stats = [
+    {
+        stat:  '450+',
+        label: 'players moved on to NCAA baseball'
+    },
+    {
+        stat:  '50+',
+        label: 'perfect game titles'
+    },
+    {
+        stat:  '8',
+        label: 'National Championships in PG & PBR'
+    },
+    {
+        stat:  '200+',
+        label: 'Top 3 PG finishes'
+    },
+  ]
   
   type Props = {};
   
-  const useStyles = createStyles(({ breakpoints }) => ({
+  const useStyles = createStyles(({ colors, radius, spacing, breakpoints }) => ({
     container: {
       display: "flex",
       flexDirection: "column",
       justifyContent: "flex-start",
       alignItems: "center",
       width: "100%",
-      maxWidth: "100vw",
-      minHeight: `calc(100vh - ${NAVBAR_HEIGHT}px)`,
       paddingBottom: "50px",
     },
     title: {
@@ -33,6 +49,17 @@ import { channels } from "./channels";
         fontSize: "23px",
       },
     },
+    subTitle: {
+        color: "white",
+        fontFamily: "Stalinist One",
+        textAlign: "center",
+        fontSize: '23px',
+    
+        [`@media (max-width: ${breakpoints.sm}px)`]: {
+          paddingTop: "20px",
+          fontSize: "18px",
+        },
+      },
     banner: {
       width: "100%",
       padding: "10px",
@@ -60,43 +87,46 @@ import { channels } from "./channels";
     },
   }));
   
-  type HeadshotProps = {
-    title: string;
-    link: string;
+  type StatProps = {
+    stat: string;
+    label: string;
   };
   
-  const Channel = ({ title, link }: HeadshotProps) => {
+  const Stat = ({ stat, label }: StatProps) => {
     return (
-      <Stack spacing={4} align="center">
+      <Stack spacing={4} align="left" sx={{width: '100%', }}>
         <Title
           sx={({ colors }) => ({
+            width: '100%',
             fontSize: "22px",
             fontFamily: "Oswald, sans-serif",
             textTransform: "uppercase",
-            textAlign: 'center',
             color: colors.eggshell[0],
+
           })}
         >
-          {title}
+          {stat}
         </Title>
-        {/* :TODO add link here */}
-        <Text>{link}</Text>
+        <Text sx={{width: '100%'}}>{label}</Text>
       </Stack>
     );
   };
   
-  export const SupportBanner = (props: Props) => {
+  export const ClubBanner = (props: Props) => {
     const { classes } = useStyles();
+    const {colors} = useMantineTheme()
   
     return (
       <>
         <Stack className={classes.container}>
-          <Title className={classes.title}>Support</Title>
-          <Stack style={{ width: "80%", paddingBottom: "5%" }}>
+          <Title className={classes.title}>Club Teams</Title>
+          <Stack sx={{ width: "80%", paddingBottom: "5%" }}>
             <Text align="center">
-            Please find the proper channel below for the support you need!
+
+            In 2017, PRD decided to enter the club baseball landscape and since have made our impact on not only the Mid-Atlantic region, but also on the national stage.
             </Text>
           </Stack>
+          <Center sx={{width: '100%', padding: '0 10px',}}>
           <SimpleGrid
             px={25}
             breakpoints={[
@@ -104,20 +134,22 @@ import { channels } from "./channels";
               { minWidth: "sm", cols: 2 },
               { minWidth: "md", cols: 3 },
               { minWidth: "lg", cols: 4 },
-              { minWidth: "xl", cols: 5 },
+              { minWidth: "xl", cols: 4 },
             ]}
           >
-            {channels.map((channel, index) => {
+            {stats.map((stat, index) => {
               return (
-                <Center key={index} style={{padding: '15px'}}>
-                  <Channel
-                    title={channel.title}
-                    link={channel.link}
+                <Center key={index} sx={{padding: '10px'}}>
+                    <div style={{border: `1px solid ${colors.red[9]}`, height: '100%', width: '1px', marginRight: '10px'}}></div>
+                  <Stat
+                    stat={stat.stat}
+                    label={stat.label}
                   />
                 </Center>
               );
             })}
           </SimpleGrid>
+          </Center>
         </Stack>
       </>
     );
