@@ -1,5 +1,6 @@
 import { getMainLayout } from "../components/core/layout/main";
 import { Head } from "../components/shared/Head";
+import { ShowcasesBanner } from "../components/features/Showcases/ShowcasesBanner";
 
 const ShowcasesPage = () => (
   <>
@@ -8,7 +9,7 @@ const ShowcasesPage = () => (
       description="PRD Ghosts"
       imageAlt="PRD Logo"
     />
-    <p>showcases and planning</p>
+    <ShowcasesBanner />
   </>
 );
 
