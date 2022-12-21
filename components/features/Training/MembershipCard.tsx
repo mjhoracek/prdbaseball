@@ -24,7 +24,7 @@ type MembershipCardProps = {
       <Stack spacing={4} align="center" sx={{padding: '20px', backgroundColor: colors.charcoal[5], borderRadius: 4}}>
         <Title
           sx={({ colors }) => ({
-            fontSize: "22px",
+            fontSize: "20px",
             fontFamily: "Oswald, sans-serif",
             textTransform: "uppercase",
             color: colors.eggshell[0],
@@ -32,8 +32,8 @@ type MembershipCardProps = {
         >
           {type}
         </Title>
-        <Text>{price}</Text>
-        <Stack pb={20} spacing={2} align="left">
+        <Text py={10} sx={{color: colors.eggshell[0]}}>{price + '/mo'}</Text>
+        <Stack py={10} spacing={2} align="left">
         {list.map((item, i) => {
             return(
                 <Group key={i}>

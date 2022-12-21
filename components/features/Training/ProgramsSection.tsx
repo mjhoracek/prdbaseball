@@ -105,7 +105,7 @@ import { ProgramCard } from "./ProgramCard";
       <>
         <Stack className={classes.container}>
           <Title className={classes.title}>Winter 2023 Programs</Title>
-          <Stack position="center"  align="center" sx={{width: '100%', padding: '25px', }}>
+          <Stack align="center" sx={{width: '100%', padding: '25px', }}>
               {programs.map((item, i) => {
                   return(
                       <div key={i}>

@@ -20,10 +20,14 @@ type ProgramCardProps = {
   };
   
   export const ProgramCard = ({ title, description, price, date, link }: ProgramCardProps) => {
-    const {colors} = useMantineTheme()
+    const {colors, breakpoints} = useMantineTheme()
  
     return (
-      <Stack spacing={4} position="center" sx={{padding: '20px', minWidth: '100%',}}>
+      <Stack spacing={4} align="left" sx={{
+        padding: '20px', 
+        width: '100%',
+        
+        }}>
         <Title
           sx={({ colors }) => ({
             fontSize: "22px",

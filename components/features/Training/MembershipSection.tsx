@@ -4,13 +4,10 @@ import {
     Stack,
     Title,
     Text,
-    SimpleGrid,
-    useMantineTheme,
     Group,
   } from "@mantine/core";
   import React from "react";
-import Link from "next/link";
-import { Button } from "../../shared/atoms/Button";
+
 import { MembershipCard } from "./MembershipCard";
 
   const memberships = [
@@ -18,8 +15,8 @@ import { MembershipCard } from "./MembershipCard";
         type:  'Players',
         price: '$199',
         list: [
-            "someting", 
-            "anoother thing",
+            "Batting Cages", 
+            "Infield training",
             'something else'
         ],
         link: '/'
@@ -106,34 +103,9 @@ import { MembershipCard } from "./MembershipCard";
     },
   }));
   
-  type StatProps = {
-    stat: string;
-    label: string;
-  };
-  
-  const Stat = ({ stat, label }: StatProps) => {
-    return (
-      <Stack spacing={4} align="left" sx={{width: '100%', }}>
-        <Title
-          sx={({ colors }) => ({
-            width: '100%',
-            fontSize: "22px",
-            fontFamily: "Oswald, sans-serif",
-            textTransform: "uppercase",
-            color: colors.eggshell[0],
-
-          })}
-        >
-          {stat}
-        </Title>
-        <Text sx={{width: '100%'}}>{label}</Text>
-      </Stack>
-    );
-  };
   
   export const MembershipSection = (props: Props) => {
     const { classes } = useStyles();
-    const {colors} = useMantineTheme()
   
     return (
       <>

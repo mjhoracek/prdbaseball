@@ -4,7 +4,6 @@ import {
     Stack,
     Title,
     Text,
-    SimpleGrid,
     useMantineTheme,
     Group,
   } from "@mantine/core";
@@ -29,14 +28,14 @@ import { Button } from "../../shared/atoms/Button";
   
   type Props = {};
   
-  const useStyles = createStyles(({ colors, radius, spacing, breakpoints }) => ({
+  const useStyles = createStyles(({ breakpoints }) => ({
     container: {
       display: "flex",
       flexDirection: "column",
       justifyContent: "flex-start",
       alignItems: "center",
       width: "100%",
-      paddingBottom: "50px",
+      paddingBottom: "30px",
     },
     title: {
       color: "white",
