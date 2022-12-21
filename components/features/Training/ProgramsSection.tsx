@@ -15,7 +15,6 @@ const programs = [
     description:
       "Text 201-304-3004 for more information on indoor & outdoor team training options",
     date: "Jan 15, 2023",
-    link: "https://prdbaseballacademy.ezfacility.com/Sessions",
   },
   {
     title:
