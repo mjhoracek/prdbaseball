@@ -1,5 +1,6 @@
 import { getMainLayout } from "../components/core/layout/main";
 import { Head } from "../components/shared/Head";
+import { Gallery } from "../components/features/Gallery/Gallery";
 
 const GalleryPage = () => (
   <>
@@ -8,7 +9,7 @@ const GalleryPage = () => (
       description="PRD Ghosts"
       imageAlt="PRD Logo"
     />
-    <p>gallery</p>
+    <Gallery />
   </>
 );
 
