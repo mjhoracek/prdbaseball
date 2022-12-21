@@ -107,6 +107,7 @@ export const Gallery = (props: Props) => {
           {photoKeys.map((key, i) => {
             return (
               <Image
+                key={i}
                 radius="md"
                 src={`/static/images/prdPhotos/${key}.jpg`}
                 alt={`photo ${key}`}
