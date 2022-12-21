@@ -8,37 +8,36 @@ import {
   SimpleGrid,
 } from "@mantine/core";
 import React from "react";
-import { NAVBAR_HEIGHT } from "../../core/layout/main";
 import { Button } from "../../shared/atoms/Button";
 import Link from "next/link";
 
 const clubTeams = [
   {
-    image: "/images/prdPhotos/34.jpg",
+    image: "/static/images/prdPhotos/22.jpg",
     name: "Ghost NJ",
     address: "Ghost Lab, 748 Hope Road Eatontown, NJ",
     link: "",
   },
   {
-    image: "/images/prdPhotos/17.jpg",
+    image: "/static/images/prdPhotos/17.jpg",
     name: "Ghost Squad PA",
     address: "Newtown Athletic Center 123 Street Newtown, PA",
     link: "",
   },
   {
-    image: "/images/prdPhotos/15.jpg",
+    image: "/static/images/prdPhotos/15.jpg",
     name: "South Jersey Ghost",
     address: "Legends 123 Street Sewell, NJ",
     link: "",
   },
   {
-    image: "/images/prdPhotos/21.jpg",
+    image: "/static/images/prdPhotos/21.jpg",
     name: "North Jersey Ghost",
     address: "Fairfield 123 Street Parsipanny, NJ",
     link: "",
   },
   {
-    image: "/images/prdPhotos/16.jpg",
+    image: "/static/images/prdPhotos/16.jpg",
     name: "RCBC Ghost",
     address: "X Athletic Center 1400 Travis Avenue Staten Island, NY",
     link: "",
@@ -47,14 +46,14 @@ const clubTeams = [
 
 const nationalTeams = [
   {
-    image: "/images/prdPhotos/17.jpg",
+    image: "/static/images/prdPhotos/17.jpg",
     name: "Artillery Scout",
     address:
       "Comprised of players from across the United States and home to several top 20 ranked teams in the nation between the ages of 14U through 18U.",
     link: "",
   },
   {
-    image: "/images/prdPhotos/17.jpg",
+    image: "/static/images/prdPhotos/17.jpg",
     name: "East Coast Ghost Scout",
     address:
       "Comprised of players from NJ, NY, PA, and other states and home to several top 20 ranked teams in the nation between the ages of 10U through 18U.",

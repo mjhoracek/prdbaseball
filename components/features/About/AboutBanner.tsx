@@ -1,7 +1,6 @@
 import {
   Center,
   createStyles,
-  Group,
   Stack,
   Title,
   Text,
@@ -122,7 +121,7 @@ export const AboutBanner = (props: Props) => {
                 <Headshot
                   name={coach.name}
                   position={coach.position}
-                  image={"/images/ghost-banner.png"}
+                  image={"/static/images/ghost-banner.png"}
                 />
               </Center>
             );

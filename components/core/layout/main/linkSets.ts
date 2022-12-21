@@ -29,10 +29,10 @@ export const headerLinks: LinkSet = [
     label: "PRD Apparel",
     href: "/",
   },
-  {
-    label: "PRD Partners",
-    href: "/prd-partners",
-  },
+  // {
+  //   label: "PRD Partners",
+  //   href: "/prd-partners",
+  // },
   {
     label: "Championship Gallery",
     href: "/championship-gallery",
