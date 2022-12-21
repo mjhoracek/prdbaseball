@@ -15,7 +15,7 @@ export const useMainStyles = createStyles(
 );
 
 export const useActiveLinkStyles = createStyles(
-  ({ colors, radius, spacing, fontSizes }) => ({
+  ({ colors, radius, breakpoints, fontSizes }) => ({
     base: {
       fontSize: fontSizes.sm,
       padding: "4px",
@@ -26,6 +26,10 @@ export const useActiveLinkStyles = createStyles(
       textDecoration: "none",
       "&:hover": {
         backgroundColor: colors.charcoal[5],
+      },
+
+      [`@media (max-width: ${breakpoints.xs}px)`]: {
+        padding: "2px",
       },
     },
     active: {

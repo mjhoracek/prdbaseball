@@ -27,7 +27,7 @@ export const headerLinks: LinkSet = [
   },
   {
     label: "PRD Apparel",
-    href: "/prd-apparel",
+    href: "/",
   },
   {
     label: "PRD Partners",
@@ -45,10 +45,10 @@ export const headerLinks: LinkSet = [
     label: "Book Lessons",
     href: "https://prdbaseballacademy.ezfacility.com/Sessions",
   },
-  {
-    label: "Contact Us",
-    href: "/contact-us",
-  },
+  // {
+  //   label: "Contact Us",
+  //   href: "/contact-us",
+  // },
   {
     label: "Player Registration",
     href: "https://peninsulariverdawgs.leagueapps.com/clubteams/1179892-2020-21-prd-registration",
